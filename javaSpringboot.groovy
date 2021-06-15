@@ -14,12 +14,8 @@ pipeline {
 
                 // Run Maven on a Unix agent.
                 sh "mvn -Dmaven.test.failure.ignore=true clean package"
-
             }
-
-        }
-    
-         
+        } 
         stage('transfer') {
             steps {
                 
@@ -28,8 +24,7 @@ pipeline {
                sh 'rsync -r -e "ssh -i /var/lib/jenkins/public_instance_key.pem" /var/lib/jenkins/workspace/javaspring/javachatapp.service ubuntu@13.127.89.96:/home/ubuntu/'
                       
                sh 'rsync -r -e  "ssh -i /var/lib/jenkins/public_instance_key.pem" /var/lib/jenkins/workspace/javaspring/start.sh ubuntu@13.127.89.96:/home/ubuntu/'
-               sh 'ssh -i /var/lib/jenkins/public_instance_key.pem ubuntu@13.127.89.96 "bash /home/ubuntu/start.sh"'
-                 
+               sh 'ssh -i /var/lib/jenkins/public_instance_key.pem ubuntu@13.127.89.96 "bash /home/ubuntu/start.sh"'        
                 
             }
         }
