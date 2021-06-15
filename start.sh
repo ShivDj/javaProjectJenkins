@@ -1,7 +1,7 @@
 #!/bin/bash
-   sudo mv /home/ubuntu/javaP.service /etc/systemd/system
+   sudo mv /home/ubuntu/javachatapp.service /etc/systemd/system
 
    sudo systemctl daemon-reload
-   sudo systemctl start javaP.service
-   sudo systemctl enable javaP.service
-   sudo systemctl restart javaP.service
+   sudo systemctl start javachatapp.service
+   sudo systemctl enable javachatapp.service
+   sudo systemctl restart javachatapp.service
