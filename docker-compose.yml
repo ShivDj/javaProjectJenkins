@@ -1,0 +1,12 @@
+services:
+  java:
+    image: java_image
+    build: /home/ubuntu/java_project
+    container_name: java_container
+     environment:
+    - dbhost=shiv.cyxq3nw89gci.ap-south-1.rds.amazonaws.com
+    - database=shiv
+    - dbuser=shiv
+    - dbpassword=shiv12345
+    ports:
+    - 8080:8080
