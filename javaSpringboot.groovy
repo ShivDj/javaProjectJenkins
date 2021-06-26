@@ -20,8 +20,8 @@ pipeline {
             steps {
                 
                sh 'rsync -r -e "ssh -i /var/lib/jenkins/public_instance_key.pem" /var/lib/jenkins/workspace/javaspring/target/SpringBootDemoProject-0.0.1-SNAPSHOT.jar ubuntu@13.232.2.165:/home/ubuntu/java'
-               sh 'rsync -r -e "ssh -i /var/lib/jenkins/public_instance_key.pem" /var/lib/jenkins/workspace/javaspring/target/Dockerfile ubuntu@13.232.2.165:/home/ubuntu/java'
-               sh 'rsync -r -e "ssh -i /var/lib/jenkins/public_instance_key.pem" /var/lib/jenkins/workspace/javaspring/target/docker-compose.yml ubuntu@13.232.2.165:/home/ubuntu/java'
+               sh 'rsync -r -e "ssh -i /var/lib/jenkins/public_instance_key.pem" /var/lib/jenkins/workspace/javaspring/Dockerfile ubuntu@13.232.2.165:/home/ubuntu/java'
+               sh 'rsync -r -e "ssh -i /var/lib/jenkins/public_instance_key.pem" /var/lib/jenkins/workspace/javaspring/docker-compose.yml ubuntu@13.232.2.165:/home/ubuntu/java'
                
                 
             }
