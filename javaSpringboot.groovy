@@ -7,7 +7,7 @@ pipeline {
     }
 
     stages {
-        stage('BUILDING_STAGE') {
+        stage('GIT-BUILDING_STAGE') {
             steps {
                 // Get some code from a GitHub repository
                 git 'https://github.com/ShivDj/javaProjectJenkins.git' 
