@@ -1,7 +1,7 @@
 services:
   java:
     image: java_image
-    build: /home/ubuntu/java_project
+    build: /home/ubuntu/java
     container_name: java_container
     environment:
     - dbhost=shiv.cyxq3nw89gci.ap-south-1.rds.amazonaws.com
