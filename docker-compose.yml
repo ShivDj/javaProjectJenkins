@@ -8,7 +8,8 @@ services:
     - database=shiv
     - dbuser=shiv
     - dbpassword=shiv12345
-    resources:
+    deploy:
+        resources:
             limits:
               cpus: 0.50
               memory: 50M
