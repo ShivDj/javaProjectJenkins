@@ -19,15 +19,15 @@ pipeline {
         stage('MOVING_STAGE') {
             steps {
                 
-               sh 'rsync -r -e "ssh -i /var/lib/jenkins/public_instance_key.pem" /var/lib/jenkins/workspace/javaspring/target/SpringBootDemoProject-0.0.1-SNAPSHOT.jar ubuntu@13.127.44.149:/home/ubuntu/java'
-               sh 'rsync -r -e "ssh -i /var/lib/jenkins/public_instance_key.pem" /var/lib/jenkins/workspace/javaspring/Dockerfile ubuntu@13.127.44.149:/home/ubuntu/java'
-               sh 'rsync -r -e "ssh -i /var/lib/jenkins/public_instance_key.pem" /var/lib/jenkins/workspace/javaspring/docker-compose.yml ubuntu@13.127.44.149:/home/ubuntu/java'
-               sh 'rsync -r -e "ssh -i /var/lib/jenkins/public_instance_key.pem" /var/lib/jenkins/workspace/javaspring/Remove.sh ubuntu@13.127.44.149:/home/ubuntu/java'               
+               sh 'rsync -r -e "ssh -i /var/lib/jenkins/public_instance_key.pem" /var/lib/jenkins/workspace/javaspring/target/SpringBootDemoProject-0.0.1-SNAPSHOT.jar ubuntu@13.235.128.78:/home/ubuntu/java'
+               sh 'rsync -r -e "ssh -i /var/lib/jenkins/public_instance_key.pem" /var/lib/jenkins/workspace/javaspring/Dockerfile ubuntu@13.235.128.78:/home/ubuntu/java'
+               sh 'rsync -r -e "ssh -i /var/lib/jenkins/public_instance_key.pem" /var/lib/jenkins/workspace/javaspring/docker-compose.yml ubuntu@13.235.128.78:/home/ubuntu/java'
+               sh 'rsync -r -e "ssh -i /var/lib/jenkins/public_instance_key.pem" /var/lib/jenkins/workspace/javaspring/Remove.sh ubuntu@13.235.128.78:/home/ubuntu/java'               
             }
         }
         stage('EXECUTING_STAGE') {
             steps {
-                sh 'ssh -i /var/lib/jenkins/public_instance_key.pem ubuntu@13.127.44.149 "bash /home/ubuntu/java/Remove.sh"'              
+                sh 'ssh -i /var/lib/jenkins/public_instance_key.pem ubuntu@13.235.128.78"bash /home/ubuntu/java/Remove.sh"'              
             }
         }
 
