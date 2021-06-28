@@ -12,7 +12,10 @@ services:
         resources:
             limits:
               cpus: 0.50
-              memory: 512M
-           
+              memory: 512M   
+    volumes:
+    - java-app-Volume:/var/lib/java_app               
     ports:
-    - 8080:8080
+    - 8080:8080 
+    volumes:
+      java-app-Volume:
