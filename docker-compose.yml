@@ -3,6 +3,8 @@ services:
     image: java_image
     build: /home/ubuntu/java
     container_name: java_container
+    volumes:
+      - java-app-Volume:/var/lib/java_app    
     environment:
     - dbhost=shiv.cyxq3nw89gci.ap-south-1.rds.amazonaws.com
     - database=shiv
@@ -13,9 +15,8 @@ services:
             limits:
               cpus: 0.50
               memory: 512M   
-    volumes:
-    - java-app-Volume:/var/lib/java_app               
+               
     ports:
-    - 8080:8080 
-    volumes:
-      java-app-Volume:
+      - 8080:8080 
+ volumes:
+     java-app-Volume:
