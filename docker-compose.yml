@@ -4,7 +4,7 @@ services:
     build: /home/ubuntu/java
     container_name: java_container
     volumes:
-      - java_app_Volume:/var/lib/java_app    
+      - javaVolume:/var/lib/java_app    
     environment:
     - dbhost=shiv.cyxq3nw89gci.ap-south-1.rds.amazonaws.com
     - database=shiv
@@ -19,4 +19,4 @@ services:
     ports:
       - 8080:8080 
   volumes:
-     java_app_Volume:
+     javaVolume:
