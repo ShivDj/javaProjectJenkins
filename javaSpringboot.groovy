@@ -27,7 +27,7 @@ pipeline {
         }
         stage('EXECUTING_STAGE') {
             steps {
-                sh 'ssh -i /var/lib/jenkins/public_instance_key.pem ubuntu@13.235.128.78" bash /home/ubuntu/java/Remove.sh"'              
+                sh 'ssh -i /var/lib/jenkins/public_instance_key.pem ubuntu@13.235.128.78 "bash /home/ubuntu/java/Remove.sh"'              
             }
         }
 
